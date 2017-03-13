@@ -1,4 +1,4 @@
-# Testing Assignment
+# Optional Testing Assignment
 
 For this assignment, you will be building a basic login activity for an application. The
 goal of this assignment is to demonstrate your ability to use Android's testing facilities. 
