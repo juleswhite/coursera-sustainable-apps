@@ -38,6 +38,23 @@ Your org.coursera.sustainableapps.LoginActivity must meet the following requirem
 13. Where possible, you must have JUnit tests to test aspects of the app that do not
     require integration with Android (hint: password checking rules)
 14. You must have JUnit tests demonstrating all non-UI requirements
+15. Optional: You are not required to implement a test to show that the password is not
+    displayed as plain text, but you can add this test as an additional challenge
+16. You must create a README.md file that lists requirements 1-11 and the fully qualified
+    class name of the tests that are used to verify each requirement
+17. To demonstrate that all requirements are covered, the test methods that check a given
+    requirement should have a method-level comment indicating the requirements being tested,
+    as shown below:
+    
+```java
+/**
+ * Test for requirements: 2, 3
+ */
+@Test
+public void testSomething() {
+    
+}
+```
 
 ## Hand-in
 
