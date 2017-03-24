@@ -55,7 +55,3 @@ public void testSomething() {
     
 }
 ```
-
-## Hand-in
-
-Coming soon 
