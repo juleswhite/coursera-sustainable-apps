@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">LocationTracker</string>
+    <string name="log_button_text">Log location</string>
+    <string name="desc_hint">Enter location description</string>
+    <string name="permission_description">An unimportant permission</string>
+</resources>

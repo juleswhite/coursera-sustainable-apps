@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="extensibleapps.vandy.mooc.locationtracker">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="vandy.mooc.SOME_PERMISSION"/>
+
+    <permission
+        android:name="vandy.mooc.SOME_PERMISSION"
+        android:label="Unimportant Permission"
+        android:description="@string/permission_description"
+        android:protectionLevel="normal"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".UIActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".LocationLogService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="vandy.mooc.SOME_PERMISSION">
+
+            <intent-filter>
+                <action android:name="vandy.mooc.intent.action.LogLocation"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "extensibleapps.vandy.mooc.locationtracker"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    testCompile 'junit:junit:4.12'
+    testCompile "org.robolectric:robolectric:3.4.2"
+	// Required by Vanderbilt autograder - do not remove
+	testCompile 'edu.vanderbilt.grader:rubric:1.0'
+
+    androidTestCompile 'edu.vanderbilt.grader:rubric:1.0'
+//    androidTestCompile 'com.android.support.test.espresso:espresso-intents:3.0.1'
+//    androidTestCompile 'com.android.support.test:runner:1.0.1'
+//    androidTestCompile 'com.android.support.test:rules:1.0.1'
+//    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
+// Required by Vanderbilt autograder - do not remove
+// This apply statement MUST be be declared after the android block.
+apply plugin: 'edu.vanderbilt.grader.plugin'
