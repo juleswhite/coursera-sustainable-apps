@@ -85,6 +85,4 @@ To see the detailed output including rubric information and test results, press 
 
 ## Submitting Your Assignment
 
-Once you feel comfortable with your implementation's performance on the test files, you can submit it using the autograder. 
-
-Run the 'runAutograder' Gradle task in the Gradle Projects tab in Android Studio. This will run all of the test files and place your results in a new 'AUTOGRADER_SUBMISSION' folder in your project directory. This folder contains a summary of your results, submission instructions, and a zip file named submission.zip. You will simply submit the submission.zip file on Coursera to complete your submission.
+Our Grading backend is still in development, so for now you can view the results of your testing in the generated submission directory after running the autograder. Once the backend is complete, you will be able to recieve an offical grade. 
